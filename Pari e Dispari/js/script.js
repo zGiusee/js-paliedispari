@@ -7,8 +7,9 @@ function rng(){
 
 // CREO LA FUNZIONE DEL RISULTATO FINALE
 function result(scelta){
+
     // CREO LE CONDIZIONI PER LA VITTORIA BASANDOMI SULLA SOMMA E SULLA SCELTA DELL'UTENTE
-    if(scelta == "pari" || scelta == "Pari" || scelta == "PARI"){
+    if(scelta.toLowerCase() == "pari"){
         
         if(somma %2 == 0){
             console.log('Complimenti, hai vinto!')
@@ -17,7 +18,7 @@ function result(scelta){
             console.log('Mi dispiace, ha vinto il computer!')
         }
     }
-    else if(scelta == "dispari" || scelta == "Dispari" || scelta == "DISPARI"){
+    else if(scelta.toLowerCase() == "dispari"){
 
         console.log("numero dispari");
 
@@ -27,9 +28,6 @@ function result(scelta){
         else{
             console.log('Complimenti, hai vinto!')
         }
-    }
-    else{
-        console.log("Hai inserito un valore non valido.")
     }
 
 }
@@ -42,25 +40,26 @@ function result(scelta){
 // CHIEDO ALL'UNTENTE DI SCEGLIERE TRA PARI E DISPARI
 let scelta = prompt("Segli se puntare sul Pari o sul Dispari scrivendolo qua sotto.");
 
+while(!(scelta.toLowerCase() == "pari" || scelta.toLowerCase() == "dispari")){
+
+    scelta = prompt("Hai inserito un valore sbagliato, scegli se puntare sul Pari o sul Dispari scrivendolo qua sotto.");
+}
+
 // CHIEDO ALL'UTENTE DI SCEGLIERE UN NUMERO DA 1 A 5
 let myNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
 
 // FACCIO 2 CONDIZIONI NEL METODO DI INSERIMENTO DEL NUMERO
 
 // 1' CONDIZIONE = IL CONTENUTO DEVE ESSERE UN NUMERO E NON UNA PAROLA
-while(isNaN(myNum) == true){
-    myNum = parseInt(prompt("Non hai inserito un numero valido. Inserisci un numero da 1 a 5"));
+while(isNaN(myNum) == false && myNum > 5 ){
 
-    if(isNaN(myNum) == false){
-        
+    if(myNum > 5){
+        myNum = parseInt(prompt("Il numero che hai inserito è troppo grande!"));
     }
-} // 2' CONDIZIONE = IL NUMERO NON DEVE ESSERE MAGGIORE DI 5
-while(myNum > 5){
-    myNum = parseInt(prompt("Hai inserito un numero tropppo alto! Inserisci un numero da 1 a 5"));
+    else if(isNaN(myNum) == true){
+        alert("nonosndoadn")
+    }
 
-    if(myNum <= 5){
-        
-    }
 }
 
 
