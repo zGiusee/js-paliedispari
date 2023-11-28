@@ -31,6 +31,7 @@ while(myNum > 5){
     }
 }
 
+
 // VERIFICO CHE SIA STATO ESEGUITO TUTTO CORRETTAMENTE
 console.log(myNum)
 
