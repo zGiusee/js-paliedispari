@@ -1,8 +1,13 @@
 // FUNZIONI
 function reverse(word){
-   
-    let reverse = word[i].split('').reverse().join('').toLowerCase();
-    console.log(reverse)
+    
+    for(let i=0; i<word.length; i++){
+        console.log(word[i])
+    }    
+
+    let reverse = word.split('').reverse().join('').toLowerCase();
+        console.log(reverse)
+
     
 }
 
@@ -12,8 +17,7 @@ function paliGuesser(word){
         console.log(word[i])
     }    
 
-    let normal = word[i].toLowerCase();
-    console.log(normal)
+    let normal = 
 }
 
 // PALINDROMA
