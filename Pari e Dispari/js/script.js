@@ -8,7 +8,7 @@ function rng(){
 // PARI E DISPARI
 
 // CHIEDO ALL'UNTENTE DI SCEGLIERE TRA PARI E DISPARI
-let scelta = prompt("Segli Pari o Dispari scrivendolo qua sotto.");
+let scelta = prompt("Segli se puntare sul Pari o sul Dispari scrivendolo qua sotto.");
 
 // CHIEDO ALL'UTENTE DI SCEGLIERE UN NUMERO DA 1 A 5
 let myNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
@@ -34,14 +34,20 @@ while(myNum > 5){
 // VERIFICO CHE SIA STATO ESEGUITO TUTTO CORRETTAMENTE
 console.log(myNum)
 
+// DICHIARO LA VARIABILE PER IL NUMERO RANDOMICO DEL COMPUTER
+let computerNum = rng();
+
+// VERIFICO CHE SIA STATO ESEGUITO TUTTO CORRETTAMENTE
+console.log(computerNum)
+
 // ESEGUO LA SOMMA TRA IL NUMERO DELL'UTENTE E QUELLO GENERATO DALL COMPUTER
-let somma = myNum + rng();
+let somma = myNum + computerNum;
 
 // VERIFICO CHE LA SOMMA SIA STATA ESEGUITA CORRETTAMENTE
 console.log(somma)
 
 // CREO LE CONDIZIONI PER LA VITTORIA BASANDOMI SULLA SOMMA E SULLA SCELTA DELL'UTENTE
-if(scelta == "pari" || scelta == "Pari"){
+if(scelta == "pari" || scelta == "Pari" || scelta == "PARI"){
     
     if(somma %2 == 0){
         console.log('Complimenti, hai vinto!')
@@ -50,7 +56,7 @@ if(scelta == "pari" || scelta == "Pari"){
         console.log('Mi dispiace, ha vinto il computer!')
     }
 }
-else if(scelta == "dispari" || scelta == "Dispari"){
+else if(scelta == "dispari" || scelta == "Dispari" || scelta == "DISPARI"){
 
     console.log("numero dispari");
 
@@ -60,6 +66,10 @@ else if(scelta == "dispari" || scelta == "Dispari"){
     else{
         console.log('Complimenti, hai vinto!')
     }
+}
+else{
+
+    console.log("Hai inserito un valore non valido.")
 }
 
 
