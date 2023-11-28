@@ -1,10 +1,11 @@
-// FUNZIONI
+// START OF FUNZIONI
 
 // CREO LA FUNZIONE CHE GENERI NUMERI CASUALI DA 1 A 5
 function rng(){
     return Math.floor(Math.random() * 5 + 1);
 }
 
+// CREO LA FUNZIONE DEL RISULTATO FINALE
 function result(scelta){
     // CREO LE CONDIZIONI PER LA VITTORIA BASANDOMI SULLA SOMMA E SULLA SCELTA DELL'UTENTE
     if(scelta == "pari" || scelta == "Pari" || scelta == "PARI"){
@@ -32,6 +33,9 @@ function result(scelta){
     }
 
 }
+// END OF FUNZIONI
+
+
 
 // PARI E DISPARI
 
