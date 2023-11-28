@@ -1,23 +1,15 @@
 // FUNZIONI
-function reverse(word){
+function paliGuesser(normal, reversed){
     
-    for(let i=0; i<word.length; i++){
-        console.log(word[i])
-    }    
+    if(normal === reversed){
+        console.log("La parola che hai inserito è palindroma!")
+    }
+    else{
+        console.log("La parola che hai inserito NON è palindroma!")
+    }
 
-    let reverse = word.split('').reverse().join('').toLowerCase();
-        console.log(reverse)
+    return;
 
-    
-}
-
-function paliGuesser(word){
-
-    for(let i=0; i<word.length; i++){
-        console.log(word[i])
-    }    
-
-    let normal = 
 }
 
 // PALINDROMA
@@ -26,16 +18,13 @@ function paliGuesser(word){
 
 let word = prompt("Inserisci la parola che credi possa essere palindroma.")
 
-let normal = paliGuesser(word);
-let reverseWord = reverse(word);
 
-if(normal === reverseWord){
-    console.log("PALINDROMA")
-}
-else{
-    console.log("NON PALIDNROMA")
-}
+let normal = word.split('').join();
+let reversed = word.split('').reverse().join();
 
+console.log(reversed, normal)
+
+paliGuesser(normal, reversed);
 
 
 
