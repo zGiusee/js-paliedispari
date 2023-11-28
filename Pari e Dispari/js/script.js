@@ -20,8 +20,6 @@ function result(scelta){
     }
     else if(scelta.toLowerCase() == "dispari"){
 
-        console.log("numero dispari");
-
         if(somma %2 == 0){
             console.log('Mi dispiace, ha vinto il computer!')
         }
