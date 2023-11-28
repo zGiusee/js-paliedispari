@@ -62,13 +62,13 @@ while(isNaN(myNum) == false && myNum > 5 ){
 
 
 // VERIFICO CHE SIA STATO ESEGUITO TUTTO CORRETTAMENTE
-console.log(myNum)
+console.log("Il tuo numero: " + myNum)
 
 // DICHIARO LA VARIABILE PER IL NUMERO RANDOMICO DEL COMPUTER
 let computerNum = rng();
 
 // VERIFICO CHE SIA STATO ESEGUITO TUTTO CORRETTAMENTE
-console.log(computerNum);
+console.log("Il numero del computer: " + computerNum);
 
 // ESEGUO LA SOMMA TRA IL NUMERO DELL'UTENTE E QUELLO GENERATO DALL COMPUTER
 let somma = myNum + computerNum;
