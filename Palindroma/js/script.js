@@ -9,6 +9,7 @@ function paliGuesser(normal){
     // CONTROLLO CHE LA PAROLA SIA STATA INVERTITA CORRETTAMENTE
     console.log(reversed);
 
+    // ESEGUO LA VERIFICA DELLE DUE PAROLE PER CAPIRE SE SONO UGUALI
     if(normal === reversed){
         console.log("La parola che hai inserito è palindroma!");
     }

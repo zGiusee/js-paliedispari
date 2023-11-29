@@ -6,11 +6,13 @@ function rng(){
 }
 
 // CREO LA FUNZIONE DEL RISULTATO FINALE
-function result(scelta){
+function result(scelta, somma){
 
     // CREO LE CONDIZIONI PER LA VITTORIA BASANDOMI SULLA SOMMA E SULLA SCELTA DELL'UTENTE
     if(scelta.toLowerCase() == "pari"){
         
+        console.log('Hai scelto pari!')
+
         if(somma %2 == 0){
             console.log('Complimenti, hai vinto!')
         }
@@ -19,6 +21,8 @@ function result(scelta){
         }
     }
     else if(scelta.toLowerCase() == "dispari"){
+
+        console.log('Hai scelto dispari')
 
         if(somma %2 == 0){
             console.log('Mi dispiace, ha vinto il computer!')
@@ -38,9 +42,11 @@ function result(scelta){
 // CHIEDO ALL'UNTENTE DI SCEGLIERE TRA PARI E DISPARI
 let scelta = prompt("Segli se puntare sul Pari o sul Dispari scrivendolo qua sotto.");
 
+// FACCIO UNA CONDIZIONE CHE NON PERMETTA DI INSERIRE UN VALORE DIVERSO DA 'pari' o 'dispari'
 while(!(scelta.toLowerCase() == "pari" || scelta.toLowerCase() == "dispari")){
 
     scelta = prompt("Hai inserito un valore sbagliato, scegli se puntare sul Pari o sul Dispari scrivendolo qua sotto.");
+
 }
 
 // CHIEDO ALL'UTENTE DI SCEGLIERE UN NUMERO DA 1 A 5
@@ -75,10 +81,10 @@ console.log("Il numero del computer: " + computerNum);
 let somma = myNum + computerNum;
 
 // VERIFICO CHE LA SOMMA SIA STATA ESEGUITA CORRETTAMENTE
-console.log(somma);
+console.log("La somma totale del numero è: " + somma);
 
 // DICHIARO LA FUNZIONE DEL RISULTATO FINALE
-result(scelta);
+result(scelta, somma);
 
 
 
