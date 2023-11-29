@@ -49,13 +49,13 @@ let myNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
 // FACCIO 2 CONDIZIONI NEL METODO DI INSERIMENTO DEL NUMERO
 
 // 1' CONDIZIONE = IL CONTENUTO DEVE ESSERE UN NUMERO E NON UNA PAROLA
-while(isNaN(myNum) == false && myNum > 5 ){
+while(myNum > 5 || isNaN(myNum) || (myNum === "")){
 
-    if(myNum > 5){
-        myNum = parseInt(prompt("Il numero che hai inserito è troppo grande!"));
+    if(isNaN(myNum) || (myNum === "")){
+        myNum = parseInt(prompt("Hai inserito una parola! Riprova con un numero da 1 a 5!"));
     }
-    else if(isNaN(myNum) == true){
-        alert("nonosndoadn")
+    else if(myNum > 5){
+        myNum = parseInt(prompt("Il numero che hai inserito è troppo grande!"));
     }
 
 }
