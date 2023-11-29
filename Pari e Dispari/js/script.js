@@ -48,7 +48,8 @@ let myNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
 
 // FACCIO 2 CONDIZIONI NEL METODO DI INSERIMENTO DEL NUMERO
 
-// 1' CONDIZIONE = IL CONTENUTO DEVE ESSERE UN NUMERO E NON UNA PAROLA
+// 1' CONDIZIONE = IL CONTENUTO DEVE ESSERE UN NUMERO  E NON UNA PAROLA
+// 2' CONDIZIONE = IL NUMERO INSERITO NON DEVE ESSERE MAGGIORE DI 5
 while(myNum > 5 || isNaN(myNum) || (myNum === "")){
 
     if(isNaN(myNum) || (myNum === "")){
@@ -62,7 +63,7 @@ while(myNum > 5 || isNaN(myNum) || (myNum === "")){
 
 
 // VERIFICO CHE SIA STATO ESEGUITO TUTTO CORRETTAMENTE
-console.log("Il tuo numero: " + myNum)
+console.log("Il tuo numero: " + myNum);
 
 // DICHIARO LA VARIABILE PER IL NUMERO RANDOMICO DEL COMPUTER
 let computerNum = rng();
